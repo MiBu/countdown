@@ -1,0 +1,32 @@
+<html style="overflow:hidden">
+	<head>
+		<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<title>Core countdown</title>
+			</head>
+			<body style="margin: 0px">
+
+				<div style="display: flex; align-items: center; justify-content: center; height:100%">
+					<div 
+		style="
+			font-size: 9vw; 
+			font-family: consolas" 
+		id="countdown">
+					</div>
+				</div>	
+				<script>
+
+
+        var countDownDate = new Date("2020-1-1").getTime();
+
+        setInterval(function () {
+
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
+
+            document.getElementById("countdown").innerHTML = distance;
+
+        }, 10);
+				</script>
+			</body>
+		</html>
