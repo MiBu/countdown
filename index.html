@@ -1,33 +1,36 @@
 <html style="overflow:hidden">
-	<head>
-		<meta charset="utf-8">
-			<meta name="viewport" content="width=device-width, initial-scale=1.0">
-				<title>Core countdown</title>
-			</head>
-			<body style="margin: 0px;background-color:black;">
 
-				<div style="display: flex; align-items: center; justify-content: center; height:100%">
-					<div 
-		style="
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Core countdown</title>
+</head>
+
+<body style="margin: 0px;background-color:black;">
+
+    <div style="display: flex; align-items: center; justify-content: center; height:100%">
+        <div style="
 		       color:white;
 			font-size: 9vw; 
-			font-family: consolas" 
-		id="countdown">
-					</div>
-				</div>	
-				<script>
-
-
+			font-family: consolas" id="countdown">
+        </div>
+    </div>
+    <script>
         var countDownDate = new Date("2020-1-1").getTime();
 
-        setInterval(function () {
+        if (countDownDate < new Date().getTime()) {
+            document.getElementById("countdown").innerHTML = "GAME OVER";
+        } else {
+            setInterval(function() {
 
-            var now = new Date().getTime();
-            var distance = countDownDate - now;
+                var now = new Date().getTime();
+                var distance = countDownDate - now;
 
-            document.getElementById("countdown").innerHTML = distance;
+                document.getElementById("countdown").innerHTML = distance;
 
-        }, 10);
-				</script>
-			</body>
-		</html>
+            }, 10);
+        }
+    </script>
+</body>
+
+</html>
