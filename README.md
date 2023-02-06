@@ -1,3 +1,3 @@
 # countdown
 
-https://domagojmedo.github.io/countdown/
+https://mibu.github.io/countdown/
